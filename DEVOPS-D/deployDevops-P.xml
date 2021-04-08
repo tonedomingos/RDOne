@@ -80,7 +80,7 @@
     <property name="natural.ant.deploy.history.log.level" value="1" />
     <property name="natural.ant.deploy.upload.sysobjh.library" value="WORKPLAN" />
     <property name="natural.ant.mapping.enable" value="NO" />
-    <property name="natural.ant.project.deploy.file.name" value="deployDevops-D.xml" />
+    <property name="natural.ant.project.deploy.file.name" value="deployDevops-P.xml" />
     <property name="natural.ant.deploy.delete" value="NO" />
     <property name="natural.ant.server.hostname" value="192.168.200.1" />
     <property name="natural.ant.short.log" value="NO" />
