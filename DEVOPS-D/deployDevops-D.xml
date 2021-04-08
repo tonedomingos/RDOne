@@ -205,7 +205,7 @@
 	
   <target name="-setRootdirNoEclipseGit" if="is.no.eclipse.git">
     <!-- set the rootdir in case of running outside Eclipse with Git -->
-    <property name="natural.ant.project.rootdir.active" value="${natural.ant.project.rootdir}/${natural.ant.project.name}"/>
+    <property name="natural.ant.project.rootdir.active" value="${natural.ant.project.rootdir}\${natural.ant.project.name}"/>
     <property name="natural.ant.project.rootdir.references" value="${natural.ant.project.rootdir}"/>
   </target>
 
