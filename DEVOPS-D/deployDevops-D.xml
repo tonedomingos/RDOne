@@ -323,7 +323,7 @@
        <arg value="--password"/>
        <arg value="${internal.natural.ant.repository.password}"/>
        <arg value="${natural.ant.repository.url}"/>
-       <arg value="${natural.ant.project.rootdir.active}/${natural.ant.project.name}"/>
+       <arg value="${natural.ant.project.rootdir.active}"/>
        <arg value="-r${natural.ant.repository.version}"/>
       </exec>
       <antcall target="-printTimestamp">
