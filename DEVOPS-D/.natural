@@ -58,7 +58,7 @@
         <SteplibNSV>SYSTEM</SteplibNSV>
         <SteplibExtensions>0;</SteplibExtensions>
         <LibrariesSteplibs/>
-        <privateMode>false</privateMode>
+        <privateMode>true</privateMode>
         <Fuser>(100,9)</Fuser>
     </EnvironmentProperties>
     <AivVariables/>
