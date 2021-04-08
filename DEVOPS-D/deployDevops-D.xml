@@ -62,8 +62,8 @@
     <property name="natural.ant.library.steplib.nsv" value="DEVOPS-D;!;!" />
     <property name="natural.ant.source.all.types" value="YES" />
     <property name="natural.ant.deploy.upload.sysobjh" value="NO" />
-    <property name="natural.ant.repository.url" value="C:/Users/user/git/RDOnelocal/.git" />
-    <property name="natural.ant.repository.version" value="master" />
+    <property name="natural.ant.repository.url" value="" />
+    <property name="natural.ant.repository.version" value="" />
     <property name="natural.ant.reference.enable" value="NO" />
     <property name="natural.ant.source.type.selection" value="2736127" />
     <property name="natural.ant.reference.string" value="" />
@@ -71,7 +71,7 @@
     <property name="natural.ant.truststore.password" value="" />
     <property name="natural.ant.deploy.upload" value="YES" />
     <property name="natural.ant.deploy.scratch" value="NO" />
-    <property name="natural.ant.repository.type" value="GIT" />
+    <property name="natural.ant.repository.type" value="SVN" />
     <property name="natural.ant.server.port" value="7070" />
     <property name="natural.ant.project.name" value="DEVOPS-D" />
     <property name="natural.ant.server.secured.environment" value="NO" />
