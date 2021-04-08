@@ -79,12 +79,12 @@
     <property name="natural.ant.deploy.stow" value="YES" />
     <property name="natural.ant.deploy.history.log.level" value="1" />
     <property name="natural.ant.deploy.upload.sysobjh.library" value="WORKPLAN" />
-    <property name="natural.ant.mapping.enable" value="NO" />
+    <property name="natural.ant.mapping.enable" value="YES" />
     <property name="natural.ant.project.deploy.file.name" value="deployDevops-P.xml" />
     <property name="natural.ant.deploy.delete" value="NO" />
     <property name="natural.ant.server.hostname" value="192.168.200.1" />
     <property name="natural.ant.short.log" value="NO" />
-    <property name="natural.ant.mapping.string" value="DEVOPS-D=DEVOPS-D;" />
+    <property name="natural.ant.mapping.string" value="DEVOPS-D=DEVOPS-P;" />
     <property name="natural.ant.failonerror" value="YES" />
     <property name="natural.ant.project.steplibs" value="0;" />
     <property name="natural.ant.deploy.catalog.retries" value="1" />
