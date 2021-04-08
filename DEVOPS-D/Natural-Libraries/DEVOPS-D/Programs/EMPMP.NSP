@@ -24,7 +24,7 @@ REPEAT
   INPUT USING MAP 'EMPDMAP'
 *
   IF #EMPID EQ ' ' AND *PF-KEY NE 'PF3'
-    REINPUT 'Please enter an Employee ID. Mensagem do RoadShow 2'
+    REINPUT 'Please enter an Employee ID. Demonstracao Devops'
   END-IF
   IF *PF-KEY EQ 'PF3'
     TERMINATE
