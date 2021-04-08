@@ -1,0 +1,23 @@
+* >Natural Source Header 000000
+* :Mode S
+* :CP
+* <Natural Source Header
+/** New Program EMPLIST.
+/**
+/** :author brmdo
+/* TODO Enter your code here
+DEFINE DATA LOCAL
+01 EMP-V VIEW OF EMPLOYEES-DB100
+  02 PERSONNEL-ID
+  02 NAME
+  02 MAR-STAT
+  02 CITY
+  02 AREA-CODE
+  02 PHONE
+END-DEFINE
+*
+READ (15) EMP-V
+  DISPLAY NAME PERSONNEL-ID CITY AREA-CODE PHONE
+END-READ
+*
+END

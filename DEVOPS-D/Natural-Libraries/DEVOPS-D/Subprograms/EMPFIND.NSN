@@ -1,0 +1,35 @@
+* >Natural Source Header 000000
+* :Mode S
+* :CP
+* <Natural Source Header
+/** New Subprogram EMPREAD.
+/** teste
+/** :author brmdo
+/* TODO Enter your code herE
+DEFINE DATA
+PARAMETER USING EMPLPRM
+*
+LOCAL USING EMPLLCL
+*
+END-DEFINE
+* -
+ST. SETTIME
+* -
+FIND EMP WITH PERSONNEL-ID = #EMPID
+  IF NO RECORDS FOUND
+    COMPRESS 'Employee ID' #EMPID' NOT found.' INTO #MSG
+    MOVE ' '           TO #EMPNAME
+    MOVE ' '           TO #EMPFIRSTNM
+    MOVE ' '           TO #EMPJOBTIT
+    MOVE ' '           TO #EMPDEPT
+    ESCAPE BOTTOM
+  END-NOREC
+  MOVE PERSONNEL-ID    TO #EMPID
+  MOVE NAME            TO #EMPNAME
+  MOVE FIRST-NAME      TO #EMPFIRSTNM
+  MOVE JOB-TITLE       TO #EMPJOBTIT
+  MOVE DEPT            TO #EMPDEPT
+  COMPRESS 'Search ' #EMPID 'at ' *ETID 'NAT Time: ' *TIMD (ST.) INTO #MSG
+END-FIND
+
+END

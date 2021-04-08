@@ -1,0 +1,21 @@
+DEFINE DATA PARAMETER
+/* >Natural Source Header 000000
+/* :Mode S
+/* :CP IBM01140
+/* <Natural Source Header
+1 CALLDATA
+  2 #LOOPCOUNT (I4)
+  2 #PERSID(A08)
+  2 #FIRST-NAME (A20)
+  2 #NAME (A20)
+  2 #ZIP (A6)
+  2 #CITY (A20)
+  2 #COUNTRY (A03)
+  2 #DEPT (A6)
+  2 #AREA-CODE (A6)
+  2 #PHONE (A15)
+  2 #JOB-TITLE (A25)
+  2 #MESSAGE (A40)
+** comment 1
+** comment 2
+END-DEFINE

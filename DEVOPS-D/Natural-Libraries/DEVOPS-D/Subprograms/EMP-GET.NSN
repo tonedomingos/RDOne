@@ -1,0 +1,47 @@
+* >Natural Source Header 000000
+* :Mode S
+* :CP IBM01140
+* <Natural Source Header
+/** New Subprogram EMP-GET.
+/**
+/** :author brmdo
+/* TODO Enter your code here
+DEFINE DATA
+PARAMETER USING EMP-PDA
+*
+LOCAL USING EMP-LDA
+*
+END-DEFINE
+*
+ST. SETTIME
+*
+* IF #LOOPCOUNT <= 1 THEN
+*   #LOOPCOUNT := 1
+* END-IF
+*
+RESET #FIRST-NAME #NAME #ZIP #CITY #COUNTRY #DEPT #AREA-CODE #PHONE #JOB-TITLE #MESSAGE
+IF #PERSID EQ ' '
+  COMPRESS 'Personnel id should be provided. ' *TIMX INTO #MESSAGE
+  ESCAPE ROUTINE
+END-IF
+*
+* FOR #I = 1 TO #LOOPCOUNT
+  FIND (1) EMP-VIEW WITH PERSONNEL-ID EQ #PERSID
+    IF NO RECORDS FOUND
+      COMPRESS 'Personnel id not found. ' *TIMX INTO #MESSAGE
+      ESCAPE BOTTOM
+    END-NOREC
+    MOVE FIRST-NAME   TO #FIRST-NAME
+    MOVE ZIP          TO #ZIP
+    MOVE NAME         TO #NAME
+    MOVE CITY         TO #CITY
+    MOVE COUNTRY      TO #COUNTRY
+    MOVE DEPT         TO #DEPT
+    MOVE AREA-CODE    TO #AREA-CODE
+    MOVE PHONE        TO #PHONE
+    MOVE JOB-TITLE    TO #JOB-TITLE
+    COMPRESS 'Search ' #PERSID 'at ' *ETID 'NAT Time: ' *TIMD (ST.) INTO #MESSAGE
+  END-FIND
+* END-FOR
+
+END

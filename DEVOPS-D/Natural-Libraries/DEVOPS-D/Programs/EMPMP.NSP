@@ -1,0 +1,39 @@
+* >Natural Source Header 000000
+* :Mode S
+* :CP IBM01140
+* <Natural Source Header
+/** New Program EMPDISP.
+/** TESTE
+/** :author brmdo
+/* TODO Enter your code here
+DEFINE DATA LOCAL
+01  EMPDATA
+  02  #EMPID           (A08)   INIT <'50005000'>
+  02  #EMPNAME         (A20)
+  02  #EMPFIRSTNM      (A20)
+  02  #EMPJOBTIT       (A25)
+  02  #EMPDEPT         (A06)
+  02  #MSG             (A60)
+END-DEFINE
+*
+SET KEY ALL
+SET KEY PF3=ON
+*
+REPEAT
+*
+  INPUT USING MAP 'EMPDMAP'
+*
+  IF #EMPID EQ ' ' AND *PF-KEY NE 'PF3'
+    REINPUT 'Please enter an Employee ID.'
+  END-IF
+  IF *PF-KEY EQ 'PF3'
+    TERMINATE
+  END-IF
+
+  IF #EMPID NE ' '
+    CALLNAT 'EMPFIND' EMPDATA
+  END-IF
+*
+END-REPEAT
+*
+END

@@ -1,0 +1,21 @@
+DEFINE DATA LOCAL
+/* >Natural Source Header 000000
+/* :Mode S
+/* :CP IBM01140
+/* <Natural Source Header
+/** New Local Data Area EMP-LDA.
+/**
+/** :author brmdo
+/* TODO Enter your data definitions here
+1 EMP-VIEW VIEW OF EMPLOYEES-DB100
+  2 FIRST-NAME
+  2 NAME
+  2 ZIP
+  2 CITY
+  2 COUNTRY
+  2 DEPT
+  2 AREA-CODE
+  2 PHONE
+  2 JOB-TITLE
+1 #I (I4)
+END-DEFINE

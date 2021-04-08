@@ -1,0 +1,77 @@
+* >Natural Source Header 000000
+* :Mode R
+* :CP IBM01140
+* <Natural Source Header
+* MAP2: PROTOTYPE VERSION 820 --- CREATED BY NAT 0901010009 ---
+* INPUT USING MAP 'XXXXXXXX'
+*     #EMPDEPT #EMPFIRSTNM #EMPID #EMPJOBTIT #EMPNAME #MSG
+DEFINE DATA PARAMETER
+1 #EMPDEPT (A006)
+1 #EMPFIRSTNM (A020)
+1 #EMPID (A008)
+1 #EMPJOBTIT (A025)
+1 #EMPNAME (A020)
+1 #MSG (A060)
+END-DEFINE
+FORMAT PS=024 LS=080 ZP=OFF SG=OFF KD=OFF IP=OFF
+* MAP2: MAP PROFILES *****************************        410***********
+* .TTAAAMMOO   D I D I N D I D I        ?_)¬&:+(                       *
+* 024079        N0NNUCN             X .      01 SYSPROF NR             *
+************************************************************************
+INPUT          (     IP=OFF                                           /*
+                                                                       )
+/
+ 002T *USER /*.02S008 A008 .
+      (AD=OD HE='NCDEMAPH' )
+ 024T 'Software AG - Employees Information'(U)
+ 071T *TIMX /*.01S008 T    .
+      (AD=OD HE='NCDEMAPH' )
+/
+/
+ 001T '=' (079)
+/
+/
+/
+ 004T 'Personnel ID...'
+ 020T #EMPID /*.99U008 A008 .
+      (AD=MDT )
+ 059T 'Library:'
+ 068T *LIBRARY-ID /*.01S010 A008 .
+      (AD=OD AL=010 )
+/
+/
+ 004T 'Name...........'
+ 020T #EMPNAME /*.99U020 A020 .
+      (AD=MDT )
+/
+/
+ 004T 'Fisrt name.....'
+ 020T #EMPFIRSTNM /*.99U020 A020 .
+      (AD=MDT )
+/
+/
+/
+ 004T 'Job title......'
+ 020T #EMPJOBTIT /*.99U025 A025 .
+      (AD=MDT )
+/
+/
+ 004T 'Department.....'
+ 020T #EMPDEPT /*.99U006 A006 .
+      (AD=MDT )
+/
+/
+/
+/
+ 004T 'Message: '
+ 014T #MSG /*.99U062 A060 .
+      (AD=MDT AL=062 )
+/
+/
+ 001T '_' (079)
+/
+ 002T 'F3-Stop Program'
+/
+* MAP2: VALIDATION *****************************************************
+* MAP2: END OF MAP *****************************************************
+END
