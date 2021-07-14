@@ -5,8 +5,8 @@
 /** New Program EMPREAD1.
 /**
 /** :author brmdo
-/* TODO Enter your code here
-DEFINE DATA LOCAL
+/* TODO Enter your code here testeserpro 
+DEFINE DATA LOCAL 
 1 CALLDATA
   2 #LOOPCOUNT   (I4)    INIT <10>
   2 #PERSID      (A08)   INIT <'50005000'>
